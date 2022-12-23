@@ -1,0 +1,13 @@
+name: setup-reliza-cli
+description: Setup RelizaHub CLI, reliza-cli, on GitHub Actions runners
+branding:
+  icon: 'terminal'
+  color: 'green'
+inputs:
+  version:
+    description: Version of reliza-cli to install
+    required: false
+    default: 2022.12.5
+runs:
+  using: node12
+  main: dist/index.js
