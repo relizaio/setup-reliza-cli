@@ -16,9 +16,9 @@ async function setup() {
     const extract = tc.extractZip;
     const pathToCLI = await extract(pathToTarball);
     const joinedPath = path.join(pathToCLI, download.binPath)
-    console.log('joinedPath: ', joinedPath)
+    console.log('pathToCLI: ', pathToCLI)
     // Expose the tool by adding it to the PATH
-    core.addPath(path.join(pathToCLI, download.binPath));
+    core.addPath(pathToCLI);
   } catch (e) {
     core.setFailed(e);
   }
