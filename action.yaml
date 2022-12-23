@@ -9,5 +9,5 @@ inputs:
     required: false
     default: 2022.12.5
 runs:
-  using: node12
+  using: node16
   main: dist/index.js
