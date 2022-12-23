@@ -28,3 +28,9 @@ steps:
 The actions supports the following inputs:
 
 - `version`: The version of `reliza-cli` to install, defaulting to `2022.12.5`
+
+## Compile
+use ncc to compile
+```
+ncc build index.js
+```

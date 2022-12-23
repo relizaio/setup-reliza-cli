@@ -21,8 +21,7 @@ async function setup() {
     // Extract the tarball/zipball onto host runner
     const extract = tc.extractZip;
     const pathToCLI = await extract(pathToTarball);
-    const joinedPath = path.join(pathToCLI, download.binPath)
-    console.log('pathToCLI: ', pathToCLI)
+    
     // Expose the tool by adding it to the PATH
     core.addPath(pathToCLI);
   } catch (e) {
