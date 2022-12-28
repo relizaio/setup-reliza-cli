@@ -11,14 +11,14 @@ Setup the `reliza-cli` CLI:
 
 ```yaml
 steps:
-- uses: relizaio/setup-reliza-cli@v1
+- uses: relizaio/setup-reliza-cli@1.0
 ```
 
 A specific version of the `reliza-cli` CLI can be installed:
 
 ```yaml
 steps:
-- uses: relizaio/setup-reliza-cli@v1
+- uses: relizaio/setup-reliza-cli@1.0
   with:
     version:
       2022.12.5
