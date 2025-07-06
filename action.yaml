@@ -7,7 +7,7 @@ inputs:
   version:
     description: Version of reliza-cli to install
     required: false
-    default: 2023.09.3
+    default: 2024.07.6
 runs:
   using: node20
   main: dist/index.js
