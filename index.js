@@ -1,10 +1,18 @@
 const path = require('path');
+const fs = require('fs');
 const core = require('@actions/core');
 const tc = require('@actions/tool-cache');
 const { getDownloadObject } = require('./lib/utils');
 
 async function setup() {
   try {
+    // Create /tmp/reliza directory
+    const relizaDir = '/tmp/reliza';
+    if (!fs.existsSync(relizaDir)) {
+      fs.mkdirSync(relizaDir, { recursive: true });
+      core.info(`Created directory: ${relizaDir}`);
+    }
+
     // Get version of tool to be installed
     const version = core.getInput('version');
 
